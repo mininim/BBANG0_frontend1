@@ -158,7 +158,9 @@
 		8A903BC628F1539D00C877A3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				8A903BD128F154BC00C877A3 /* Guest */,
 				8A903BC528F1539400C877A3 /* Master */,
+				8A903BD028F154B400C877A3 /* Map */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -170,6 +172,20 @@
 				8A903BCB28F1542600C877A3 /* CustomAddMasterTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		8A903BD028F154B400C877A3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		8A903BD128F154BC00C877A3 /* Guest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Guest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
