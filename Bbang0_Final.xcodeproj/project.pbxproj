@@ -29,6 +29,10 @@
 		8A903BD528F1554500C877A3 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BD428F1554500C877A3 /* Map.storyboard */; };
 		8A903BD728F1557100C877A3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BD628F1557100C877A3 /* LoginViewController.swift */; };
 		8A903BD928F1557F00C877A3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BD828F1557F00C877A3 /* RegisterViewController.swift */; };
+		8A903BDC28F157D800C877A3 /* Eric.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BDB28F157D800C877A3 /* Eric.storyboard */; };
+		8A903BDE28F157E500C877A3 /* Hwi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BDD28F157E500C877A3 /* Hwi.storyboard */; };
+		8A903BE028F157FE00C877A3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BDF28F157FE00C877A3 /* Login.storyboard */; };
+		8A903BE228F1580900C877A3 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BE128F1580900C877A3 /* Register.storyboard */; };
 		F76213937CFE0605648E6EE8 /* Pods_Bbang0_FinalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524CF2798833C53E4EF67D0B /* Pods_Bbang0_FinalTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +83,10 @@
 		8A903BD428F1554500C877A3 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		8A903BD628F1557100C877A3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8A903BD828F1557F00C877A3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8A903BDB28F157D800C877A3 /* Eric.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Eric.storyboard; sourceTree = SOURCE_ROOT; };
+		8A903BDD28F157E500C877A3 /* Hwi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hwi.storyboard; sourceTree = SOURCE_ROOT; };
+		8A903BDF28F157FE00C877A3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		8A903BE128F1580900C877A3 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		92049B82453271F847842669 /* Pods-Bbang0_FinalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bbang0_FinalTests.release.xcconfig"; path = "Target Support Files/Pods-Bbang0_FinalTests/Pods-Bbang0_FinalTests.release.xcconfig"; sourceTree = "<group>"; };
 		955CBD8F34AA5D41343C0184 /* Pods-Bbang0_Final-Bbang0_FinalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bbang0_Final-Bbang0_FinalUITests.release.xcconfig"; path = "Target Support Files/Pods-Bbang0_Final-Bbang0_FinalUITests/Pods-Bbang0_Final-Bbang0_FinalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B3901FED4223215332A3E6CA /* Pods-Bbang0_Final.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bbang0_Final.debug.xcconfig"; path = "Target Support Files/Pods-Bbang0_Final/Pods-Bbang0_Final.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,7 +151,11 @@
 				8A903B9028F151DD00C877A3 /* ViewController.swift */,
 				8A903BC628F1539D00C877A3 /* Domain */,
 				8A903B9228F151DD00C877A3 /* Main.storyboard */,
+				8A903BDF28F157FE00C877A3 /* Login.storyboard */,
+				8A903BE128F1580900C877A3 /* Register.storyboard */,
 				8A903BC128F1529A00C877A3 /* Leah.storyboard */,
+				8A903BDB28F157D800C877A3 /* Eric.storyboard */,
+				8A903BDD28F157E500C877A3 /* Hwi.storyboard */,
 				8A903B9828F151DD00C877A3 /* Assets.xcassets */,
 				8A903B9A28F151DD00C877A3 /* LaunchScreen.storyboard */,
 				8A903B9D28F151DD00C877A3 /* Info.plist */,
@@ -185,8 +197,8 @@
 			children = (
 				8A903BDA28F1558800C877A3 /* Login & Register */,
 				8A903BD128F154BC00C877A3 /* Guest */,
-				8A903BC528F1539400C877A3 /* Master */,
 				8A903BD028F154B400C877A3 /* Map */,
+				8A903BC528F1539400C877A3 /* Master */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -245,7 +257,6 @@
 				617D48EAE1E6737418BF912B /* Pods-Bbang0_FinalTests.debug.xcconfig */,
 				92049B82453271F847842669 /* Pods-Bbang0_FinalTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -358,12 +369,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A903BDE28F157E500C877A3 /* Hwi.storyboard in Resources */,
 				8A903BD328F1553800C877A3 /* BakeryInfo.storyboard in Resources */,
+				8A903BDC28F157D800C877A3 /* Eric.storyboard in Resources */,
 				8A903BD528F1554500C877A3 /* Map.storyboard in Resources */,
 				8A903BCE28F1542600C877A3 /* CustomAddMasterTableViewCell.xib in Resources */,
 				8A903BC228F1529A00C877A3 /* Leah.storyboard in Resources */,
+				8A903BE228F1580900C877A3 /* Register.storyboard in Resources */,
 				8A903B9C28F151DD00C877A3 /* LaunchScreen.storyboard in Resources */,
 				8A903B9928F151DD00C877A3 /* Assets.xcassets in Resources */,
+				8A903BE028F157FE00C877A3 /* Login.storyboard in Resources */,
 				8A903B9428F151DD00C877A3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

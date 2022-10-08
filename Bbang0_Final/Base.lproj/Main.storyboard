@@ -16,18 +16,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-qI-b5p">
-                                <rect key="frame" x="167" y="307" width="55" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSc-qI-b5p">
+                                <rect key="frame" x="177" y="144" width="60" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <connections>
+                                    <segue destination="rbF-E1-khm" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="n6a-NF-Hgd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81W-gw-UNZ">
+                                <rect key="frame" x="168" y="245" width="78" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                <connections>
+                                    <segue destination="nqs-rZ-OtH" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="nkd-Jy-hbW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXZ-fB-qcv">
+                                <rect key="frame" x="182.5" y="346" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Hwi"/>
+                                <connections>
+                                    <segue destination="bIo-Om-IeX" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="UYO-8h-kvp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxj-fA-5ML">
+                                <rect key="frame" x="182.5" y="447" width="49" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Eric"/>
+                                <connections>
+                                    <segue destination="uDk-5p-RjJ" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="Pn9-37-ytJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZu-eR-azG">
+                                <rect key="frame" x="179.5" y="548" width="55" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Leah"/>
                                 <connections>
-                                    <segue destination="3rI-fX-RgD" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="O2x-Xm-oQU"/>
+                                    <segue destination="3rI-fX-RgD" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="eeW-Fc-MUy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YZu-eR-azG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AG5-EQ-gze"/>
+                            <constraint firstItem="HXZ-fB-qcv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EAR-Bo-10c"/>
+                            <constraint firstItem="YZu-eR-azG" firstAttribute="top" secondItem="dxj-fA-5ML" secondAttribute="bottom" constant="70" id="FA8-KV-dUX"/>
+                            <constraint firstItem="81W-gw-UNZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ztd-DR-7bP"/>
+                            <constraint firstItem="dxj-fA-5ML" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bM3-k3-yGs"/>
+                            <constraint firstItem="HXZ-fB-qcv" firstAttribute="top" secondItem="81W-gw-UNZ" secondAttribute="bottom" constant="70" id="nB2-F0-lxl"/>
+                            <constraint firstItem="81W-gw-UNZ" firstAttribute="top" secondItem="eSc-qI-b5p" secondAttribute="bottom" constant="70" id="ppc-YT-lHP"/>
+                            <constraint firstItem="dxj-fA-5ML" firstAttribute="top" secondItem="HXZ-fB-qcv" secondAttribute="bottom" constant="70" id="qfY-F9-sa9"/>
+                            <constraint firstItem="eSc-qI-b5p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="r92-qd-EsH"/>
+                            <constraint firstItem="eSc-qI-b5p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yNn-LQ-xTw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -37,10 +80,42 @@
         <!--Leah-->
         <scene sceneID="Hro-bJ-Exc">
             <objects>
-                <viewControllerPlaceholder storyboardName="Leah" referencedIdentifier="Leah" id="3rI-fX-RgD" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Leah" storyboardName="Leah" referencedIdentifier="Leah" id="3rI-fX-RgD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tx-gd-Wo6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="644" y="-8"/>
+            <point key="canvasLocation" x="676" y="90"/>
+        </scene>
+        <!--Hwi-->
+        <scene sceneID="vUR-nU-8MN">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Hwi" storyboardName="Hwi" referencedIdentifier="Hwi" id="bIo-Om-IeX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRC-N2-7hK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="-1"/>
+        </scene>
+        <!--Register-->
+        <scene sceneID="Utm-1u-u2H">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Register" storyboardName="Register" referencedIdentifier="Register" id="nqs-rZ-OtH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xj0-1a-iuw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="-51"/>
+        </scene>
+        <!--Eric-->
+        <scene sceneID="Kgt-4y-58l">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Eric" storyboardName="Hwi" referencedIdentifier="Eric" id="uDk-5p-RjJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySd-dM-8QZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="42"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="Djx-Dp-mhH">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" referencedIdentifier="Login" id="rbF-E1-khm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OVM-fo-HF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="-93"/>
         </scene>
     </scenes>
     <resources>
