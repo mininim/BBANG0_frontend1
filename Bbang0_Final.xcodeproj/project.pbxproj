@@ -18,6 +18,7 @@
 		8A903BB128F151DD00C877A3 /* Bbang0_FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BB028F151DD00C877A3 /* Bbang0_FinalUITests.swift */; };
 		8A903BB328F151DD00C877A3 /* Bbang0_FinalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BB228F151DD00C877A3 /* Bbang0_FinalUITestsLaunchTests.swift */; };
 		8A903BC228F1529A00C877A3 /* Leah.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BC128F1529A00C877A3 /* Leah.storyboard */; };
+		8A903BC428F1538D00C877A3 /* AddMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BC328F1538D00C877A3 /* AddMasterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		8A903BB028F151DD00C877A3 /* Bbang0_FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bbang0_FinalUITests.swift; sourceTree = "<group>"; };
 		8A903BB228F151DD00C877A3 /* Bbang0_FinalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bbang0_FinalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8A903BC128F1529A00C877A3 /* Leah.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leah.storyboard; sourceTree = "<group>"; };
+		8A903BC328F1538D00C877A3 /* AddMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				8A903B8C28F151DD00C877A3 /* AppDelegate.swift */,
 				8A903B8E28F151DD00C877A3 /* SceneDelegate.swift */,
 				8A903B9028F151DD00C877A3 /* ViewController.swift */,
+				8A903BC628F1539D00C877A3 /* Domain */,
 				8A903B9228F151DD00C877A3 /* Main.storyboard */,
 				8A903BC128F1529A00C877A3 /* Leah.storyboard */,
 				8A903B9828F151DD00C877A3 /* Assets.xcassets */,
@@ -131,6 +134,22 @@
 				8A903BB228F151DD00C877A3 /* Bbang0_FinalUITestsLaunchTests.swift */,
 			);
 			path = Bbang0_FinalUITests;
+			sourceTree = "<group>";
+		};
+		8A903BC528F1539400C877A3 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				8A903BC328F1538D00C877A3 /* AddMasterViewController.swift */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		8A903BC628F1539D00C877A3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8A903BC528F1539400C877A3 /* Master */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A903B9728F151DD00C877A3 /* Bbang0_Final.xcdatamodeld in Sources */,
+				8A903BC428F1538D00C877A3 /* AddMasterViewController.swift in Sources */,
 				8A903B9128F151DD00C877A3 /* ViewController.swift in Sources */,
 				8A903B8D28F151DD00C877A3 /* AppDelegate.swift in Sources */,
 				8A903B8F28F151DD00C877A3 /* SceneDelegate.swift in Sources */,
