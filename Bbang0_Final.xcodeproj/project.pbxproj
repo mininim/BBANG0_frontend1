@@ -19,6 +19,10 @@
 		8A903BB328F151DD00C877A3 /* Bbang0_FinalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BB228F151DD00C877A3 /* Bbang0_FinalUITestsLaunchTests.swift */; };
 		8A903BC228F1529A00C877A3 /* Leah.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BC128F1529A00C877A3 /* Leah.storyboard */; };
 		8A903BC428F1538D00C877A3 /* AddMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BC328F1538D00C877A3 /* AddMasterViewController.swift */; };
+		8A903BC828F153EC00C877A3 /* EditMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BC728F153EC00C877A3 /* EditMasterViewController.swift */; };
+		8A903BCA28F1540100C877A3 /* BakeryInfoMasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BC928F1540100C877A3 /* BakeryInfoMasterViewController.swift */; };
+		8A903BCD28F1542600C877A3 /* CustomAddMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BCB28F1542600C877A3 /* CustomAddMasterTableViewCell.swift */; };
+		8A903BCE28F1542600C877A3 /* CustomAddMasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BCC28F1542600C877A3 /* CustomAddMasterTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		8A903BB228F151DD00C877A3 /* Bbang0_FinalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bbang0_FinalUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8A903BC128F1529A00C877A3 /* Leah.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leah.storyboard; sourceTree = "<group>"; };
 		8A903BC328F1538D00C877A3 /* AddMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMasterViewController.swift; sourceTree = "<group>"; };
+		8A903BC728F153EC00C877A3 /* EditMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMasterViewController.swift; sourceTree = "<group>"; };
+		8A903BC928F1540100C877A3 /* BakeryInfoMasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryInfoMasterViewController.swift; sourceTree = "<group>"; };
+		8A903BCB28F1542600C877A3 /* CustomAddMasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAddMasterTableViewCell.swift; sourceTree = "<group>"; };
+		8A903BCC28F1542600C877A3 /* CustomAddMasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAddMasterTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				8A903BC328F1538D00C877A3 /* AddMasterViewController.swift */,
+				8A903BC728F153EC00C877A3 /* EditMasterViewController.swift */,
+				8A903BC928F1540100C877A3 /* BakeryInfoMasterViewController.swift */,
+				8A903BCF28F1546200C877A3 /* Cell */,
 			);
 			path = Master;
 			sourceTree = "<group>";
@@ -150,6 +161,15 @@
 				8A903BC528F1539400C877A3 /* Master */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		8A903BCF28F1546200C877A3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8A903BCC28F1542600C877A3 /* CustomAddMasterTableViewCell.xib */,
+				8A903BCB28F1542600C877A3 /* CustomAddMasterTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A903BCE28F1542600C877A3 /* CustomAddMasterTableViewCell.xib in Resources */,
 				8A903BC228F1529A00C877A3 /* Leah.storyboard in Resources */,
 				8A903B9C28F151DD00C877A3 /* LaunchScreen.storyboard in Resources */,
 				8A903B9928F151DD00C877A3 /* Assets.xcassets in Resources */,
@@ -284,11 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A903BCD28F1542600C877A3 /* CustomAddMasterTableViewCell.swift in Sources */,
 				8A903B9728F151DD00C877A3 /* Bbang0_Final.xcdatamodeld in Sources */,
 				8A903BC428F1538D00C877A3 /* AddMasterViewController.swift in Sources */,
 				8A903B9128F151DD00C877A3 /* ViewController.swift in Sources */,
 				8A903B8D28F151DD00C877A3 /* AppDelegate.swift in Sources */,
+				8A903BC828F153EC00C877A3 /* EditMasterViewController.swift in Sources */,
 				8A903B8F28F151DD00C877A3 /* SceneDelegate.swift in Sources */,
+				8A903BCA28F1540100C877A3 /* BakeryInfoMasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
