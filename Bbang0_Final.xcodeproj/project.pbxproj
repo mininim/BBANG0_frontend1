@@ -26,7 +26,6 @@
 		8A903BCD28F1542600C877A3 /* CustomAddMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BCB28F1542600C877A3 /* CustomAddMasterTableViewCell.swift */; };
 		8A903BCE28F1542600C877A3 /* CustomAddMasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BCC28F1542600C877A3 /* CustomAddMasterTableViewCell.xib */; };
 		8A903BD328F1553800C877A3 /* BakeryInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BD228F1553800C877A3 /* BakeryInfo.storyboard */; };
-		8A903BD528F1554500C877A3 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BD428F1554500C877A3 /* Map.storyboard */; };
 		8A903BD728F1557100C877A3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BD628F1557100C877A3 /* LoginViewController.swift */; };
 		8A903BD928F1557F00C877A3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A903BD828F1557F00C877A3 /* RegisterViewController.swift */; };
 		8A903BE028F157FE00C877A3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BDF28F157FE00C877A3 /* Login.storyboard */; };
@@ -84,7 +83,6 @@
 		8A903BCB28F1542600C877A3 /* CustomAddMasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAddMasterTableViewCell.swift; sourceTree = "<group>"; };
 		8A903BCC28F1542600C877A3 /* CustomAddMasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAddMasterTableViewCell.xib; sourceTree = "<group>"; };
 		8A903BD228F1553800C877A3 /* BakeryInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BakeryInfo.storyboard; sourceTree = "<group>"; };
-		8A903BD428F1554500C877A3 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		8A903BD628F1557100C877A3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8A903BD828F1557F00C877A3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8A903BDF28F157FE00C877A3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 		8A903BD028F154B400C877A3 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				8A903BD428F1554500C877A3 /* Map.storyboard */,
 				BEEF94FC28F1643900777BF6 /* testcccc.swift */,
 				BEEF94FE28F166DA00777BF6 /* BakeryCollectionView.swift */,
 				BEEF950028F166FB00777BF6 /* BakeryCollectionViewCell.swift */,
@@ -382,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A903BD328F1553800C877A3 /* BakeryInfo.storyboard in Resources */,
-				8A903BD528F1554500C877A3 /* Map.storyboard in Resources */,
 				8A903BCE28F1542600C877A3 /* CustomAddMasterTableViewCell.xib in Resources */,
 				8A903BC228F1529A00C877A3 /* Leah.storyboard in Resources */,
 				8A903BE628F1615200C877A3 /* Eric.storyboard in Resources */,
