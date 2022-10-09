@@ -6,24 +6,45 @@
 //
 
 import UIKit
+import MapKit
+import SnapKit
 
-class MapViewController: UIViewController {
 
+class MapViewController: UIViewController, CLLocationManagerDelegate {
+
+    let mapView = MKMapView()
+    
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setUpView()
+        setConstraints()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setUpView(){
+        
+        self.view.addSubview(mapView)
+    
     }
-    */
-
+    
+    func setConstraints() {
+        
+        mapView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
+        }
+        
+    }
+    
 }
