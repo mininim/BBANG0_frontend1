@@ -15,6 +15,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     //MARK: - Property
     let locationManager = CLLocationManager()
     
+    //testing for forking
+    
     //MARK: - UI Property
     
     let mapView = MKMapView()
