@@ -12,16 +12,25 @@ import SnapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
+    //MARK: - Property
+    let locationManager = CLLocationManager()
+    
+    //MARK: - UI Property
+    
     let mapView = MKMapView()
     
-    let locationManager = CLLocationManager()
+    
+    
+    
+    //MARK: - LifeCycle/Initializer
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUpView()
         setConstraints()
         
+        //locationManager 처리
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -29,7 +38,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-
+    //MARK: - Custom Method
+    
     func setUpView(){
         
         self.view.addSubview(mapView)
