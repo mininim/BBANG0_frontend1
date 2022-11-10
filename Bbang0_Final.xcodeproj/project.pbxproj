@@ -32,6 +32,7 @@
 		8A903BE228F1580900C877A3 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BE128F1580900C877A3 /* Register.storyboard */; };
 		8A903BE428F1610B00C877A3 /* Hwi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BE328F1610B00C877A3 /* Hwi.storyboard */; };
 		8A903BE628F1615200C877A3 /* Eric.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A903BE528F1615200C877A3 /* Eric.storyboard */; };
+		8AAA1A80291D144200B681C0 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AAA1A7F291D144200B681C0 /* NavigationViewController.swift */; };
 		A0497F492913CB480004FEEB /* BakeryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0497F482913CB480004FEEB /* BakeryInfoViewController.swift */; };
 		BEEF94FD28F1643900777BF6 /* testcccc.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF94FC28F1643900777BF6 /* testcccc.swift */; };
 		BEEF94FF28F166DA00777BF6 /* BakeryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEF94FE28F166DA00777BF6 /* BakeryCollectionView.swift */; };
@@ -90,6 +91,7 @@
 		8A903BE128F1580900C877A3 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		8A903BE328F1610B00C877A3 /* Hwi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hwi.storyboard; sourceTree = "<group>"; };
 		8A903BE528F1615200C877A3 /* Eric.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Eric.storyboard; sourceTree = "<group>"; };
+		8AAA1A7F291D144200B681C0 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		92049B82453271F847842669 /* Pods-Bbang0_FinalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bbang0_FinalTests.release.xcconfig"; path = "Target Support Files/Pods-Bbang0_FinalTests/Pods-Bbang0_FinalTests.release.xcconfig"; sourceTree = "<group>"; };
 		955CBD8F34AA5D41343C0184 /* Pods-Bbang0_Final-Bbang0_FinalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bbang0_Final-Bbang0_FinalUITests.release.xcconfig"; path = "Target Support Files/Pods-Bbang0_Final-Bbang0_FinalUITests/Pods-Bbang0_Final-Bbang0_FinalUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A0497F482913CB480004FEEB /* BakeryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BakeryInfoViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 				8A903BD128F154BC00C877A3 /* Guest */,
 				8A903BD028F154B400C877A3 /* Map */,
 				8A903BC528F1539400C877A3 /* Master */,
+				8AAA1A7F291D144200B681C0 /* NavigationViewController.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 				8A903BCD28F1542600C877A3 /* CustomAddMasterTableViewCell.swift in Sources */,
 				8A903B9728F151DD00C877A3 /* Bbang0_Final.xcdatamodeld in Sources */,
 				8A903BC428F1538D00C877A3 /* AddMasterViewController.swift in Sources */,
+				8AAA1A80291D144200B681C0 /* NavigationViewController.swift in Sources */,
 				8A903B9128F151DD00C877A3 /* ViewController.swift in Sources */,
 				8A903B8D28F151DD00C877A3 /* AppDelegate.swift in Sources */,
 				8A903BC828F153EC00C877A3 /* EditMasterViewController.swift in Sources */,
