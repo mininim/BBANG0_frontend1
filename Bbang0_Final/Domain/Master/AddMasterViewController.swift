@@ -8,7 +8,7 @@
 import UIKit
 
 class AddMasterViewController: UIViewController {
-
+// 이 파일 끝내기
     override func viewDidLoad() {
         super.viewDidLoad()
 
