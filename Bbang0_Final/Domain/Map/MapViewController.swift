@@ -43,7 +43,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             // -- 2 주변 탐색 / collection view 띄우기
             
             
-            
         }), for: .touchUpInside)
 
         
@@ -54,14 +53,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     private lazy var backeryCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = .zero
+//        layout.minimumLineSpacing = 10
         layout.minimumInteritemSpacing = 12
         layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    
         
-        let cv = UICollectionView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 32), collectionViewLayout: layout)
+        let cv = UICollectionView(frame: .zero , collectionViewLayout: layout)
         cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .clear
-        cv.allowsMultipleSelection = true
+        cv.allowsMultipleSelection = false
+        
         return cv
     }()
     
@@ -74,12 +75,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         setUpView()
         setConstraints()
         
+        setDelegate()
+        
         //locationManager 처리
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
+        
+        backeryCollectionView.register(BakeryCollectionViewCell.self, forCellWithReuseIdentifier: BakeryCollectionViewCell.identifier)
     }
     
     //MARK: - Custom Method
@@ -89,6 +94,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         self.view.addSubview(mapView)
         self.view.addSubview(searchButton)
         self.view.addSubview(backeryCollectionView)
+    
     }
     
     func setConstraints() {
@@ -108,8 +114,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         backeryCollectionView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-20)
+            
+            make.leading.trailing.equalTo(0)
+            
+            make.height.equalTo(229)
+            make.bottom.equalTo(1000)
+            
         }
         
         
@@ -120,14 +130,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         backeryCollectionView.delegate = self
     }
     
-    private func registerCell(){
-//        BakeryCollectionViewCell.register(target: backeryCollectionView)
-    }
+    
     
     func updatesearchButtonConstraints(){
         
         searchButton.snp.updateConstraints { make in
             make.bottom.equalToSuperview().offset(-299)
+        }
+        
+        backeryCollectionView.snp.updateConstraints { make in
+            make.bottom.equalTo(-48)
+            
         }
         
         
@@ -137,7 +150,18 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
 }
 // MARK: - CollectionView Delegate
-extension MapViewController : UICollectionViewDelegate{
+
+extension MapViewController : UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemSpacing :CGFloat = 10
+        let myWidth :CGFloat = (collectionView.bounds.width - itemSpacing * 2 )
+        
+        return CGSize(width: myWidth, height: collectionView.bounds.height)
+    }
+}
+
+extension MapViewController : UICollectionViewDelegate {
+
     
 }
 
@@ -147,8 +171,17 @@ extension MapViewController : UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BakeryCollectionViewCell.identifier, for: indexPath) as? BakeryCollectionViewCell else{
+            return UICollectionViewCell()
+        }
+        
+        cell.backgroundColor = .white
+        
+        return cell
+        
     }
+    
     
     
 }
