@@ -39,11 +39,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             print("search button tapped!")
             self.backeryCollectionViewOpened = true
             
-            // -- 1 constraint 변경
-            self.updatesearchButtonConstraints()
+            // -- CollectionView & searchButton & delet 버튼 띄우기
+            self.popUpSearchButton()
+            self.showBakeryCollectionView()
             
-            
-            // -- 2 주변 탐색 / collection view 띄우기
             
             
         }), for: .touchUpInside)
@@ -65,6 +64,60 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         cv.isPagingEnabled = true
 
         return cv
+        
+    }()
+    
+    private lazy var hideButton: UIButton = {
+       
+ 
+        let btn = UIButton()
+        btn.setImage(UIImage(named: "up_arrow_btn"), for: .normal)
+        btn.setImage(UIImage(named: "down_arrow_btn"), for: .selected)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+
+        btn.addAction(UIAction(handler: { action in
+            
+            
+            print("hideButton button tapped!")
+            
+            
+            if self.backeryCollectionViewOpened{
+                
+                self.backeryCollectionViewOpened = false
+                self.popDownSearchButton()
+                self.hideBakeryCollectionView()
+                
+            }else{
+                
+                self.backeryCollectionViewOpened = true
+                self.popUpSearchButton()
+                self.showBakeryCollectionView()
+                
+            }
+            
+        }), for: .touchUpInside)
+        
+        return btn
+        
+    }()
+    
+    
+    private lazy var locationButton: UIButton = {
+       
+ 
+        let btn = UIButton()
+        btn.setImage(UIImage(named: "myLocation_btn"), for: .normal)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+
+        btn.addAction(UIAction(handler: { action in
+            
+            // 내 주변 위치로 이동 기능
+            
+            
+            
+        }), for: .touchUpInside)
+        
+        return btn
         
     }()
     
@@ -90,13 +143,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     //MARK: - Custom Method
+    private func setDelegate(){
+        backeryCollectionView.dataSource = self
+        backeryCollectionView.delegate = self
+    }
+    
     
     func setUpView(){
         
         self.view.addSubview(mapView)
         self.view.addSubview(searchButton)
         self.view.addSubview(backeryCollectionView)
-    
+        self.view.addSubview(hideButton)
+        self.view.addSubview(locationButton)
     }
     
     func setConstraints() {
@@ -124,25 +183,53 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
             
         }
         
+        hideButton.snp.makeConstraints { make in
+            
+            make.centerY.equalTo(searchButton.snp.centerY)
+            make.leading.equalTo(searchButton.snp.trailing).offset(76)
+            
+        }
+        
+        locationButton.snp.makeConstraints { make in
+            
+            make.centerY.equalTo(searchButton.snp.centerY)
+            make.trailing.equalTo(searchButton.snp.leading).offset(-76)
+            
+        }
         
     }
     
-    private func setDelegate(){
-        backeryCollectionView.dataSource = self
-        backeryCollectionView.delegate = self
+    func hideBakeryCollectionView(){
+        backeryCollectionView.snp.updateConstraints { make in
+            make.bottom.equalTo(1000)
+            
+        }
     }
     
+    func showBakeryCollectionView(){
+        backeryCollectionView.snp.updateConstraints { make in
+            make.bottom.equalTo(-48)
+            
+        }
+    }
     
-    
-    func updatesearchButtonConstraints(){
+    func popUpSearchButton(){
+        
+        hideButton.isSelected = true
         
         searchButton.snp.updateConstraints { make in
             make.bottom.equalToSuperview().offset(-299)
         }
         
-        backeryCollectionView.snp.updateConstraints { make in
-            make.bottom.equalTo(-48)
-            
+        
+    }
+    
+    func popDownSearchButton(){
+        
+        hideButton.isSelected = false
+        
+        searchButton.snp.updateConstraints { make in
+            make.bottom.equalToSuperview().offset(-82)
         }
         
         
