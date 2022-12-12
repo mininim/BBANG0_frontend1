@@ -19,7 +19,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     private var backeryCollectionViewOpened : Bool = false
     
-    
+    var isOneStepPaging = true
+    var currentIndex: CGFloat = 0
     
     
     //MARK: - UI Property
@@ -28,8 +29,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     private lazy var searchButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("내 위치 탐색", for: .normal)
+        btn.titleLabel?.font = btn.titleLabel?.font.withSize(14.0)
         btn.layer.cornerRadius = 16
         btn.setBackgroundImage(UIImage(named: "mapSearchButton"), for: .normal)
+        
         btn.addAction(UIAction(handler: { _ in
             
             // search Button 눌렀을 때
@@ -53,17 +56,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     private lazy var backeryCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-//        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 12
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-    
         
         let cv = UICollectionView(frame: .zero , collectionViewLayout: layout)
         cv.showsHorizontalScrollIndicator = false
         cv.backgroundColor = .clear
-        cv.allowsMultipleSelection = false
         
+        cv.decelerationRate = .fast
+        cv.isPagingEnabled = true
+
         return cv
+        
     }()
     
     
@@ -152,11 +154,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 // MARK: - CollectionView Delegate
 
 extension MapViewController : UICollectionViewDelegateFlowLayout{
+    
+    //paging
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemSpacing :CGFloat = 10
-        let myWidth :CGFloat = (collectionView.bounds.width - itemSpacing * 2 )
+        let itemSpacing :CGFloat = 12
+        let myWidth :CGFloat = (collectionView.frame.size.width - itemSpacing)
         
-        return CGSize(width: myWidth, height: collectionView.bounds.height)
+        return CGSize(width: myWidth, height: collectionView.frame.size.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        let itemSpacing :CGFloat = 12
+        return itemSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let itemSpacing :CGFloat = 12
+        return UIEdgeInsets(top: 0, left: itemSpacing/2, bottom: 0, right: itemSpacing/2);
     }
 }
 
@@ -185,3 +199,6 @@ extension MapViewController : UICollectionViewDataSource{
     
     
 }
+
+
+
