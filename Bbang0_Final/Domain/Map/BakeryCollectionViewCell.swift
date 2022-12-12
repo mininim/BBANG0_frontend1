@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 import Then
 
 class BakeryCollectionViewCell: UICollectionViewCell {
@@ -20,12 +21,13 @@ class BakeryCollectionViewCell: UICollectionViewCell {
         
     }
     
-    var bakeryNameLabel = UILabel().then {
-        
-        $0.translatesAutoresizingMaskIntoConstraints  = false
-        $0.text = "하루한빵"
-        
-    }
+    private var bakeryNameLabel :UILabel =  {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints  = false
+        lb.text = "하루 한빵"
+        lb.font = lb.font.withSize(18.0)
+        return lb
+    }()
     
     var locationSymbol = UIImageView().then{
         
@@ -34,10 +36,14 @@ class BakeryCollectionViewCell: UICollectionViewCell {
         
     }
     
-    var bakeryLocationLabel = UILabel().then{
-        $0.translatesAutoresizingMaskIntoConstraints  = false
-        $0.text = "서울 노원구 공릉로 324-29, 하루 한빵"
-    }
+    private var bakeryLocationLabel : UILabel = {
+        let lb = UILabel()
+        lb.translatesAutoresizingMaskIntoConstraints  = false
+        lb.text = "서울 노원구 공릉로 324-29, 하루 한빵"
+        lb.textColor = .gray
+        lb.font = lb.font.withSize(13)
+        return lb
+    }()
     
     
     override init(frame: CGRect){
@@ -61,12 +67,11 @@ class BakeryCollectionViewCell: UICollectionViewCell {
         layer.shadowOffset = CGSize(width: 10, height: 10)
         
         self.clipsToBounds = true
+        
     }
     
     func setConstraint(){
         self.backgroundColor = .white
-        
-        
         
         self.addSubview(bakeryImage)
         self.addSubview(bakeryNameLabel)
@@ -85,7 +90,7 @@ class BakeryCollectionViewCell: UICollectionViewCell {
         bakeryNameLabel.snp.makeConstraints { make in
             
             make.leading.equalTo(20)
-            make.top.equalTo(162)
+            make.bottom.equalTo(-42)
             
         }
         
